@@ -12,7 +12,7 @@ export class HttpservicesService {
   constructor(private http:HttpClient) { 
     this.username='rickymwethera'
   }
-  getprofile(){
+  getProfile(){
     return this.http.get("https://api.github.com/users/" +this.username + "?access_token=" + environment.githubToken)
 
   }
