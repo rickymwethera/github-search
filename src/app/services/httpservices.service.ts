@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 })
 export class HttpservicesService {
   private username:string;
+  private apiKey:'57abb460160e85d95cf8a277c96fe75974163eb4';
 
 
   constructor(private http:HttpClient) { 
@@ -18,5 +19,8 @@ export class HttpservicesService {
   }
   getrepos(){
     return this.http.get("")
+  }
+  updateProfile(username:string) {
+    this.username = username;
   }
 }
