@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpservicesService } from '../services/httpservices.service'
 
 @Component({
   selector: 'app-repo-details',
