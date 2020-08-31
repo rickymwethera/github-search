@@ -8,7 +8,7 @@ import { HttpservicesService } from '../services/httpservices.service'
 })
 export class RepoDetailsComponent implements OnInit {
 
-  profile:any[];
+  profile:any;
   repos:any[];
   username:string;
 
@@ -21,8 +21,8 @@ export class RepoDetailsComponent implements OnInit {
       console.log(profile)
       this.profile=profile
     });
-    this.httpService.getrepos().subscribe(repo=>{
-      console.log(repo)
+    this.httpService.getrepos().subscribe(repos=>{
+      console.log(repos)
       this.repos;
     })
   }
