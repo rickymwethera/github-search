@@ -4,7 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpservicesService } from './services/httpservices.service';
 import { RepoDetailsComponent } from './repo-details/repo-details.component'
+
 
 
 @NgModule({
@@ -18,7 +20,7 @@ import { RepoDetailsComponent } from './repo-details/repo-details.component'
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HttpservicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
