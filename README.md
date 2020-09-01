@@ -2,7 +2,7 @@
 
 #### By Ricky Mwethera
 ## Live Link
-
+https://rickymwethera.github.io/github-search/
 ## Description
 This is an application that allows a user to look up anyone that has a github account and view their details simply by searching their username
 ## Setup/Installation Requirements
