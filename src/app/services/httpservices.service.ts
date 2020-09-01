@@ -11,14 +11,14 @@ export class HttpservicesService {
 
 
   constructor(private http:HttpClient) { 
-    this.username='rickymwethera'
+    this.username=''
   }
   getProfile(){
     return this.http.get("https://api.github.com/users/" +this.username + "?access_token=" + environment.githubToken)
 
   }
-  getrepos(){
-    return this.http.get("https://api.github.com/users/" +this.username + "/repos?access_token=" +environment.githubToken)
+  getRepos(){
+    return this.http.get("https://api.github.com/users/" +this.username + "/repos" + "?access_token=" +environment.githubToken)
   }
   updateProfile(username:string) {
     this.username = username;

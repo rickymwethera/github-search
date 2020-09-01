@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <div class="titletxt">
         <h1>GITHUB SEARCH</h1>
         <P>Explore github easily by just typing in the username below.</P>
@@ -30,23 +30,28 @@
           
         </div>
     </div>
-    <div class="col-md-6" *ngFor='let repo of repos'>
-      <div class="card">
-      <div class="card-body">
-        <p>
-          {{repo.name}} <a href='{repo.html_url}}' class="btn btn-warning"> View project</a> 
-        </p>
-       <p>{{repo.description}}</p>
-
-
+    <div class="new">
+    <h1>Repositories</h1>
+</div>
+    <div class="repos">
+    <div class="row">
+      <div class="col-md-6" *ngFor='let repo of repos'>
+          <div class="card-body">
+            <uL>
+              <p>
+                {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-warning">View Repository</a><br>
+                {{repo.description}}
+              </p>
+           
+            </uL>
+         
+          </div>
+       
       </div>
-        
-          
-        
-      </div>
-     
-      </div>
-     
+    </div>
+    </div>
+    
+  
   </div>
   
 

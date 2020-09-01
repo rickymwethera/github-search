@@ -1,3 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.css";
 .titletxt {
     color: white;
     text-align: center;
@@ -7,4 +8,5 @@ body {
     background-image: url(./assets/github.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: teal;
 }

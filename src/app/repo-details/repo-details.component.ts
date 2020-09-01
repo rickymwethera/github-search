@@ -9,11 +9,18 @@ import { HttpservicesService } from '../services/httpservices.service'
 export class RepoDetailsComponent implements OnInit {
 
   profile:any;
-  repos:any[4];
+  repos:any[1];
   username:string;
 
   constructor(private httpService:HttpservicesService) { 
-    this.httpService.getProfile()
+    this.httpService.getProfile().subscribe(profile=>{
+      console.log(profile)
+      this.profile=profile
+    });
+    this.httpService.getRepos().subscribe(repo=>{
+      console.log(repo)
+      this.repos=repo
+    })
   }
   // findProfile() {
   //   this.httpService.updateProfile(this.username)
@@ -27,9 +34,9 @@ export class RepoDetailsComponent implements OnInit {
       console.log(profile)
       this.profile=profile
     });
-    this.httpService.getrepos().subscribe(repos=>{
-      console.log(repos)
-      this.repos;
+    this.httpService.getRepos().subscribe(repo=>{
+      console.log(repo)
+      this.repos = repo;
     })
   }
 
